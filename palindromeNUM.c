@@ -1,4 +1,4 @@
-//program for checking prime num or not
+//program for checking num tobe palindrome or not
 #include<stdio.h>//header file include (preprocessor directives)
 #include<stdlib.h>
 #include<math.h>
