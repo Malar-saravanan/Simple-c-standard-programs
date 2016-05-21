@@ -1,22 +1,32 @@
-//program for checking perfect num or not
+//program for checking strong num or not
 #include<stdio.h>//header file include (preprocessor directives)
 #include<stdlib.h>
 #include<math.h>
+int fact(int n)
+{
+
+    if(n==0)
+        return 0;
+    if(n==1)
+        return 1;
+    else
+        return(n*fact(n-1));
+}
 int main()
 {
-    int n,i,s=0;
-    i=1;
+    int n1,n,i,r,s=0;
     printf("Enter the number");
-    scanf("%d",&n);
-    while(i<n)
+    scanf("%d",&n1);
+    n=n1;
+    while(n1)
     {
-        if(n%i==0)
-            s=s+i;
-            i++;
+        r=n1%10;
+        s+=fact(r);
+        n1=n1/10;
     }
     if(s==n)
-        printf("Perfect number");
+        printf("Strong number");
     else
-        printf("Not a perfect number");
+        printf("Not a strong number");
     return 0;
 }
